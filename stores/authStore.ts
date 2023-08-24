@@ -9,7 +9,6 @@ export const useAuthStore = definePiniaStore('authStore', () => {
     const loginResult = await auth('login', {email, password})
     if(loginResult) {
         user.value = loginResult.user
-        router.push('/abc')
     }
   }
 
@@ -21,6 +20,10 @@ export const useAuthStore = definePiniaStore('authStore', () => {
     }
   }
 
+  const signOut = async () => {
+    await auth('logout', {})
+  }
+
   const setUser = (payload: any) => {
     user.value = payload
   }
@@ -30,6 +33,7 @@ export const useAuthStore = definePiniaStore('authStore', () => {
     isLoggedIn,
     login,
     signUp,
-    setUser
+    setUser,
+    signOut
   }
 })

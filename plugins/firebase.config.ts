@@ -27,6 +27,10 @@ export default defineNuxtPlugin(() => {
             setUser(user)
             router.push('/abc')
         }
+        else {
+            setUser({})
+            router.push('/auth/login')
+        }
     })
 
     return {
