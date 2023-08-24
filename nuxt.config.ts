@@ -25,5 +25,5 @@ export default defineNuxtConfig({
       ['defineStore', 'definePiniaStore'], // import { defineStore as definePiniaStore } from 'pinia'
     ],
   },
-  css: ['@/assets/css/main.css']
+  css: ['@/assets/css/main.css', '@fortawesome/fontawesome-svg-core/styles.css']
 })
